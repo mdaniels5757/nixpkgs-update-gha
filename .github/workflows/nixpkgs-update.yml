@@ -9,7 +9,7 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '48 20 * * *'
 
 env:
   # Don't touch these unless you know what you're doing
@@ -37,7 +37,50 @@ jobs:
       matrix:
         package:
           # Add your packages here, by attrpath, e.g: python3Packages.yourpackage
-          - 
+          - brotli
+          - cargo-binstall
+          - coreutils
+          - ed
+          - eslint
+          - findutils
+          - gh
+          - gnumake
+          - gnupatch
+          - gzip
+          - hyperfine
+          - iputils
+          - isocodes
+          - knope
+          - less
+          - libsodium
+          - man
+          - man-db
+          - man-pages
+          - nh
+          - nh-unwrapped
+          - nixpkgs-review
+          - nixpkgs-vet
+          - nix-update
+          - nps
+          - nvchecker
+          - patch
+          - procps
+          - python3Packages.attrs
+          - python3Packages.brotli
+          - python3Packages.cryptography
+          - python3Packages.nvchecker
+          - python3Packages.pipdeptree
+          - python3Packages.pynacl
+          - python3Packages.tree-sitter-zeek
+          - python3Packages.tzdata
+          - qrencode
+          - regex-cli
+          - shadow
+          - su
+          - time
+          - which
+          - xeyes
+          - zeekscript
 
     steps:
       - if: ${{ !matrix.package }}
